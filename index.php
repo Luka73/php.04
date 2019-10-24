@@ -9,11 +9,11 @@
     <div class="container">
        <div class="col-4">
             <h2>Área Restrita</h2>
-            <form action="">
-                <label for="">Login: </label>
-                <input type="text" class="form-control">
-                <label for="">Senha: </label>
-                <input type="password" class="form-control">
+            <form action="verificar-login.php" method="post">
+                <label>Login: </label>
+                <input type="text" name="login" class="form-control">
+                <label>Senha: </label>
+                <input type="password" name="senha" class="form-control">
                 <input type="submit" value="Entrar" class="btn btn-success mt-2">
             </form>
         </div>
