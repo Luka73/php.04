@@ -12,7 +12,11 @@
     <?php echo "Seja bem-vindo(a) ".$_SESSION["nome"]; ?>
     <hr>
     <h4>Menu</h4>
-    <a href="cadastrar.php">Cadastrar Usuário</a><br>
+    <?php
+        if($_SESSION["perfil"] == "admin")
+            echo "<a href='cadastrar.php'>Cadastrar Usuário</a>";
+    ?>
+    <br>
     <a href="consultar.php">Consultar Usuário</a><br>
     <a href="alterar-senha.php">Alterar Senha</a><br>
     <a href="sair.php">Sair</a>

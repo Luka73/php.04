@@ -40,12 +40,14 @@
                         </tr>
                         <?php
                         while($row = mysqli_fetch_array($result)){
+                        $perfil = 
+                            ($row["perfil"] == "user") ? "Usuário" : "Administrador";    
                         ?>
                               <tr>
                                   <td><?php echo $row["nome"]?></td>
                                   <td><?php echo $row["login"]?></td>
                                   <td><?php echo $row["email"]?></td>
-                                  <td><?php echo 'perfil' ?></td>
+                                  <td><?php echo $perfil ?></td>
                                   <td><a href="editar.php?id=<?php echo $row['id']?>"><i class="fas fa-user-edit"></i></a></td>
                                   <td>
                                       <a href="#" onclick="excluir( <?php echo $row['id']; ?> )">
